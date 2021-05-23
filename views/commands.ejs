@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="/styles/commands.css">
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <title>Commands Avatar Bot</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logomark">
+                <img src="/assets/logo-bot.png" alt="StarBot">
+                <span>Avatar</span>
+            </div>
+            <div class="options">
+                <a href="/add"><button>Adicionar</button></a>
+                <ul>
+                    <li><a href="/discord"><i class="fa fa-phone"></i> Suporte</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar-compact">
+            <div class="logomark">
+                <img src="./assets/logo-bot.png" alt="StarBot">
+                <span>Avatar</span>
+            </div>
+            <div class="options">
+                <span id="button-navbar"><i class="fa fa-align-justify"></i></span>
+            </div>
+            <div class="list-options" id="navbar-list-link">
+                <ul>
+                    <li><a href="/discord"><i class="fa fa-phone"></i> Suporte</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                </ul>
+                <a href="/add"><button>Adicionar</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="list">
+            <div class="category">
+                <% Object.keys(commands).forEach(a => { %>
+                    <details>
+                        <summary style="background-color: <%= commands[a].color %>;"><%= commands[a].name %></summary>
+                        <div class="commands">
+                            <% for (let i = 0; i < commands[a].commands.length; i++) {%>
+                                <div class="command"><code><%= commands[a].commands[i].name %></code> • <%= commands[a].commands[i].description %></div>
+                            <% } %>
+                        </div>
+                    </details>
+                <% }) %>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="links">
+            <ul>
+                <li><a href="/twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="/discord"><i class="fab fa-discord"></i></a></li>
+                <li><a href="/github"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="content">&copy; Copyright 2021 - Todos os Direitos Reservados | By iNsaNy Developers</div>
+    </footer>
+
+    <script src="/scripts/clickDropdown.js"></script>
+</body>
+
+</html>

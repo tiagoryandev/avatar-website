@@ -1,0 +1,270 @@
+header {
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+
+    margin-top: 5px;
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        max-width: 1200px;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6px 5%;
+
+        position: relative;
+        animation: top-to-buttom 1s 1;
+
+        .logomark {
+            display: flex;
+            align-items: center;
+
+            user-select: none;
+
+            img {
+                cursor: pointer;
+
+                width: 50px;
+                padding: 5px;
+
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+            }
+
+            span {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                line-height: 0px;
+
+                margin-left: 5%;
+            }
+        }
+
+        .options {
+            display: flex;
+            flex-direction: row-reverse;
+
+            a {
+                text-decoration: none;
+                user-select: none;
+
+                button {
+                    cursor: pointer;
+                    
+                    outline: none;
+                    text-transform: uppercase;
+                    color: #ffffff;
+
+                    padding: 6px 10px;
+                    border: 2px solid #ffffff;
+                    border-radius: 3px;
+
+                    background-color: transparent;
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                margin-left: 5%;
+                margin-right: 5%;
+
+                list-style: none;
+
+                li {
+                    margin-right: 20px;
+
+                    a {
+                        cursor: pointer;
+                        user-select: none;
+                        
+                        white-space: nowrap;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background: #ffffff;
+                        transition: width .3s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-compact {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        max-width: 800px;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6px 5%;
+
+        position: relative;
+        animation: top-to-buttom 1s 1;
+
+        .logomark {
+            display: flex;
+            align-items: center;
+
+            user-select: none;
+
+            img {
+                cursor: pointer;
+
+                width: 50px;
+                padding: 5px;
+
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+            }
+
+            span {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                line-height: 0px;
+
+                margin-left: 5%;
+            }
+        }
+
+        .options {
+            display: flex;
+            flex-direction: row-reverse;
+
+            span {
+                cursor: pointer;
+                user-select: none;
+
+                font-size: 20px;
+                text-decoration: none;  
+                color: #ffffff;
+            }
+        }
+
+        .list-options {
+            display: none;
+    
+            width: 100%;
+            max-width: 800px;
+    
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 0px;
+    
+            position: relative;
+            transform: translateX(-20px);
+            animation: left-to-rigth 0.5s 1;
+            animation-fill-mode: forwards;
+    
+            ul {
+                list-style: none;
+    
+                li {
+                    cursor: pointer;
+                    user-select: none;
+    
+                    a {
+                        color: #ffffff;
+                        vertical-align: 10px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                user-select: none;
+
+                button {
+                    margin-top: 10px;
+                    transform: translateX(-5px);
+                    
+                    cursor: pointer;
+                    
+                    outline: none;
+                    text-transform: uppercase;
+                    color: #ffffff;
+
+                    padding: 6px 10px;
+                    border: 2px solid #ffffff;
+                    border-radius: 3px;
+
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@keyframes left-to-rigth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes top-to-buttom {
+    0% {
+        opacity: 0;
+        top: -1vw;
+    }
+    100% {
+        opacity: 1;
+        top: 0vw;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        .navbar {
+            display: none;
+        }
+    
+        .navbar-compact {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 210px) {
+    header {
+        .navbar-compact {
+            .logomark {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

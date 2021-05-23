@@ -1,0 +1,120 @@
+@import "_navbar.scss";
+@import "_footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://media.discordapp.net/attachments/837045605292965958/844189718714777650/thumb-1920-909912.png?width=923&height=519);
+    background-size: 1000px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+main {
+    width: 100%;
+
+    margin: 10vh auto;
+    padding: 0 5%;
+
+    .list {
+        width: 100%;
+        max-width: 800px;
+
+        margin: 0 auto;
+
+        .category {
+            width: 100%;
+
+            details {
+                margin: 10px 0;
+                
+                summary {
+                    padding: 20px;
+                    border-radius: 5px;
+                    list-style: none;
+                    color: #cccccc;
+                    transition: color 0.5s;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    user-select: none;
+                    cursor: pointer;
+                }
+
+                .commands {
+                    transform: translateY(-10px);
+                }
+
+                &[open] {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    summary {
+                        color: #ffffff;
+                        transition: color 0.5s;
+                    }
+
+                    .commands {
+                        padding: 20px;
+
+                        animation: listMove 0.5s forwards;
+
+                        .command {
+                            margin: 10px 0px;
+                            line-height: 30px;
+
+                            code {
+                                cursor: pointer;
+                                user-select: none;
+                                background-color: #111011;
+                                color: #ffffff;
+                                padding: 5px 7px;
+                                border-radius: 4px;
+                                transition: background-color 0.5s;
+
+                                &:hover {
+                                    background-color: rgb(197, 85, 85);
+                                    transition: background-color 0.5s;
+                                }
+                            }
+
+                            color: #d4d4d4;
+                            user-select: none;
+                            transition: color 0.5s;
+
+                            &:hover {
+                                color: #ffffff;
+                                transition: color 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes listMove {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

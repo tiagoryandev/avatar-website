@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <title>Avatar Discord Bot</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logomark">
+                <img src="/assets/logo-bot.png" alt="StarBot">
+                <span>Avatar</span>
+            </div>
+            <div class="options">
+                <a href="/add"><button>Adicionar</button></a>
+                <ul>
+                    <li><a href="/discord"><i class="fa fa-phone"></i> Suporte</a></li>
+                    <li><a href="/commands"><i class="fa fa-code"></i> Comandos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar-compact">
+            <div class="logomark">
+                <img src="./assets/logo-bot.png" alt="StarBot">
+                <span>Avatar</span>
+            </div>
+            <div class="options">
+                <span id="button-navbar"><i class="fa fa-align-justify"></i></span>
+            </div>
+            <div class="list-options" id="navbar-list-link">
+                <ul>
+                    <li><a href="/discord"><i class="fa fa-phone"></i> Suporte</a></li>
+                    <li><a href="/commands"><i class="fa fa-code"></i> Comandos</a></li>
+                </ul>
+                <a href="/add"><button>Adicionar</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <div class="text">
+                <h1>Avatar</h1>
+                <span><%= homeconfig.description %></span>
+            </div>
+            <div class="button">
+                <a href="/add"><button class="add">Adicionar</button></a>
+                <a href="/discord"><button class="support">Suporte</button></a>
+            </div>
+        </div>
+
+
+        <div class="feature-title-line" id="link-features">
+            <div class="line"></div>
+            <span>Funcionalidades</span>
+            <div class="line"></div>
+        </div>
+
+        <div class="features">
+            <div class="list">
+                <% for (let i = 0; i < cards.length; i++) { %>
+                    <div class="card">
+                        <span class="name-category" id="<%= cards[i].id %>"><%= cards[i].title %></span>
+                        <div class="content">
+                            <div class="line" from="<%= cards[i].id %>" style="background-color: <%= cards[i].background %>;"></div>
+                            <span><%= cards[i].description %></span>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+    <div class="box-button">
+        <a href="/add"><button>COMEÇAR</button></a>
+        <div class="content">DEIXEI O SEU SERVIDOR INCRÍVEL COM O AVATAR!</div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <ul>
+                <li><a href="/twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="/discord"><i class="fab fa-discord"></i></a></li>
+                <li><a href="/github"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="content">&copy; Copyright 2021 - Todos os Direitos Reservados | By iNsaNy Developers</div>
+    </footer>
+
+    <script src="/scripts/clickDropdown.js"></script>
+</body>
+
+</html>

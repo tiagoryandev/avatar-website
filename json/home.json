@@ -1,0 +1,9 @@
+{
+    "description": "Pequena descrição",
+    "links": {
+        "inviteBot": "Link do Bot",
+        "discord": "Servidor de Suporte",
+        "twitter": "Seu Twitter",
+        "github": "Link do Github"
+    }
+}

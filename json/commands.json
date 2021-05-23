@@ -1,0 +1,18 @@
+{
+    "categorys": {
+        "category-abrevietion": {
+            "name": "Nome da Categoria",
+            "color": "indianred",
+            "commands": [
+                {
+                    "name": "comando1",
+                    "description": "descrição do comando"
+                },
+                {
+                    "name": "comando2",
+                    "description": "descrição do comando 2"
+                }
+            ]
+        }
+    }
+}

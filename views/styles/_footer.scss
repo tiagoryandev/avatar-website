@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    margin: 40px 0;
+
+    .links {
+        text-align: center;
+
+        ul {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                user-select: none;
+                list-style: none;
+
+                margin: 0 1%;
+
+                a {
+                    user-select: none;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    color: #ffffff;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+        text-align: center;
+        color: #ffffff;
+        user-select: none;
+    }
+}

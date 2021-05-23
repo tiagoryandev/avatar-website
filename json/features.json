@@ -1,0 +1,40 @@
+{
+    "list": [
+        {
+            "id": "feature-shield",
+            "background": "#7B68EE",
+            "title": "Defesa",
+            "description": "Avatar possui um incrível sistema de defesa, que irá possibilitar ao servidor uma defesa impenetrável contra ataques, assim deixano seus membros e canais totalmente seguros."
+        },
+        {
+            "id": "feature-utils",
+            "background": "#ADFF2F",
+            "title": "Utilidades",
+            "description": "Veja milhares de informações de membros, servidores e canais, ferramentas incríveis para manutenções e sistemas de modificação do servidor."
+        },
+        {
+            "id": "feature-manager",
+            "background": "#40E0D0",
+            "title": "Gerenciamento",
+            "description": "Tenha um grande controlhe sobre a entrada e saída dos novos membros, sistemas de automação para adição de cargos, Logs de Mensagens, Boosts e Contador em tempo real!"
+        },
+        {
+            "id": "feature-mod",
+            "background": "#B22222",
+            "title": "Moderação",
+            "description": "O Avatar possui varias ferramentas de moderação, assim facilitando o meio de punição aos membros de má conduta dentro do seu servidor."
+        },
+        {
+            "id": "feature-eco",
+            "background": "#FFD700",
+            "title": "Economia",
+            "description": "Suba de rank e se torne membro mais rico do seu servidor, poís o Avatar possui vários comandos de economia para você criar sua própria história!"
+        },
+        {
+            "id": "feature-music",
+            "background": "#DC143C",
+            "title": "Músicas",
+            "description": "Está afim de ouvir aquela música nas horas vagas? O Avatar pode te ajudar nisso, possuindo um sistema de reprodução de músicas em canais de voz!"
+        }
+    ]
+}
